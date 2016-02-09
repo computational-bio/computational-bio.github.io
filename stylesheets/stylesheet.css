@@ -360,3 +360,12 @@ a:hover {
 .contributors-description {
 
 }
+
+.text-style {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.text-bold-style {
+    text-align: left;
+}

@@ -369,3 +369,9 @@ a:hover {
 .text-bold-style {
     text-align: left;
 }
+
+.hiv-sequence {
+    text-align: justify;
+    text-justify: inter-word;
+    word-break: break-all;
+}

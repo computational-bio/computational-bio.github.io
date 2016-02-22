@@ -5,9 +5,20 @@
     <title>Computational Biology by computational-bio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap-theme.min.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/npm.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){});
+
+    </script>
 </head>
 <body>
 <section class="page-header">
@@ -76,77 +87,129 @@
     <p class="text-style">We selected two sequence of HIV-1 virus, <b>A</b> and <b>B</b> from HIV Sequence Database.</p>
 
     <br>
-    <b>HIV-1 A :</b>
-    <p class="hiv-sequence">
-        TGGAAGGGTTAATTTACTCCAGGAGAAGACAAGAAATCCTTGATCTGTGGGTCTACCACACACAAGGCTTCTTCCCTGATTGGCAGGAATACACACCAGGGCCAGGGGTTAGATACCCATTAACATTTGGATGGTGCTTCAAGCTAGTACCAGTTGATCCAGATGAGGTAGAGGGGGCTACTGAGGGAGAGAACAACAGCCTGTTACACCCGATATGTCAACATGGAATGGATGATGAGGAGAAAGAAGTATTAAAGTGGAAGTTTGACAGCCGCCTGGCACTAAAACACAGAGCCCAAGAGATGCATCCGGAGTTCTACAAGAACTGAAGAACTGCTGACACAGAAGTTGCTGACAGGGACTTTCTGATGGGGACTTTCCAGGGGAGGTGTGGTTTGGGCGGAGTTGGGGAGTGGCTAACCCTCAGATGCTGCATATAAGCAGCTGCTTCTCGCTTGTACTGGGTCTCTCTTGTTAGACCAGATCGAGCCTGGGAGCTCTCTGGCTAGCTAGGGAACCCACTGCTTAAGCCTCAATAAAGCTTGCCTTGAGTGCTTCAAGTAGTGTGTGCCCATCTGTTGTGACTCTGGTAACTAGAGATCCCTCAGACCTCTTTAGTCAGTGTGGAAAATCTCTAGCA
+    <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist" id="myTabs">
+            <li role="presentation" class="active"><a href="#hiv-1A" aria-controls="hiv-1A" role="tab" data-toggle="tab">HIV-1 A</a></li>
+            <li role="presentation"><a href="#hiv-1B" aria-controls="hiv-1B" role="tab" data-toggle="tab">HIV-1 B</a></li>
+        </ul>
 
-    </p>
-    <br>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="hiv-1A">
+                <p class="hiv-sequence">
+                    TGGAAGGGTTAATTTACTCCAGGAGAAGACAAGAAATCCTTGATCTGTGGGTCTACCACACACAAGGCTTCTTCCCTGATTGGCAGGAATACACACCAGGGCCAGGGGTTAGATACCCATTAACATTTGGATGGTGCTTCAAGCTAGTACCAGTTGATCCAGATGAGGTAGAGGGGGCTACTGAGGGAGAGAACAACAGCCTGTTACACCCGATATGTCAACATGGAATGGATGATGAGGAGAAAGAAGTATTAAAGTGGAAGTTTGACAGCCGCCTGGCACTAAAACACAGAGCCCAAGAGATGCATCCGGAGTTCTACAAGAACTGAAGAACTGCTGACACAGAAGTTGCTGACAGGGACTTTCTGATGGGGACTTTCCAGGGGAGGTGTGGTTTGGGCGGAGTTGGGGAGTGGCTAACCCTCAGATGCTGCATATAAGCAGCTGCTTCTCGCTTGTACTGGGTCTCTCTTGTTAGACCAGATCGAGCCTGGGAGCTCTCTGGCTAGCTAGGGAACCCACTGCTTAAGCCTCAATAAAGCTTGCCTTGAGTGCTTCAAGTAGTGTGTGCCCATCTGTTGTGACTCTGGTAACTAGAGATCCCTCAGACCTCTTTAGTCAGTGTGGAAAATCTCTAGCA
+                </p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="hiv-1B">
+                <p class="hiv-sequence">
+                    TGGATGGGCTAATTTACTCCCAAAAAAGACAAGATATCCTTGATTTGTGGGTCTACCACACACAAGGCTACTTCCCTGATTGGCAGAACTACACACCAGGGCCAGGGACCAGATTTCCACTGACCTTTGGATGGTGCTTCAAGCTAGTACCAGTTGAGCCAGAGAAGGTAGAGGAGGCTAATGAAGGAGAGAACAACTGCTTGTTACACCCTATGAGCCTGCATGGGATGGAGGACCCGGAGAAAGAAGTGTTAGTATGGAAGTTTGACAGCACCCTAGCATTCCATCACGTGGCCCGAGAGCTGCATCCGGAGTACTACAGAGACTGCTGACATTGAGCTTTCTACAAGGGACTTTCCGCTGGGGACTTTCCAGGGAGGCGTGGCCTGGGCGGGACTGGGGAGTGGCGAGCCCTCAGATGCTGCATATAAGCAGCTGCTTTTTGCCTGTACTGGGTCTCTCTGGTTAGACCAGATCTGAGCCTGGGAGCTCTCTGGCTAACTAGGGAACCCACTGCTTAAGCCTCAATAAAGCTTGCCTTGAGTGCTTCAAGTAGTGTGTGCCCGTCTGTTGTGTGACTCTGGTAACTAGAGATCCCTCAGACCCTTTTAGTCAGTGTGGAAAATCTCTAGCA
+                </p>
+            </div>
+        </div>
 
-    <b>HIV-1 B :</b>
-    <p class="hiv-sequence">
-        TGGATGGGCTAATTTACTCCCAAAAAAGACAAGATATCCTTGATTTGTGGGTCTACCACACACAAGGCTACTTCCCTGATTGGCAGAACTACACACCAGGGCCAGGGACCAGATTTCCACTGACCTTTGGATGGTGCTTCAAGCTAGTACCAGTTGAGCCAGAGAAGGTAGAGGAGGCTAATGAAGGAGAGAACAACTGCTTGTTACACCCTATGAGCCTGCATGGGATGGAGGACCCGGAGAAAGAAGTGTTAGTATGGAAGTTTGACAGCACCCTAGCATTCCATCACGTGGCCCGAGAGCTGCATCCGGAGTACTACAGAGACTGCTGACATTGAGCTTTCTACAAGGGACTTTCCGCTGGGGACTTTCCAGGGAGGCGTGGCCTGGGCGGGACTGGGGAGTGGCGAGCCCTCAGATGCTGCATATAAGCAGCTGCTTTTTGCCTGTACTGGGTCTCTCTGGTTAGACCAGATCTGAGCCTGGGAGCTCTCTGGCTAACTAGGGAACCCACTGCTTAAGCCTCAATAAAGCTTGCCTTGAGTGCTTCAAGTAGTGTGTGCCCGTCTGTTGTGTGACTCTGGTAACTAGAGATCCCTCAGACCCTTTTAGTCAGTGTGGAAAATCTCTAGCA
-
-    </p>
+    </div>
     <br><br>
 
     <p class="text-style">
         We compared the DNA strands of HIV-1A and HIV-1B using two different techniques –
-
-        <br><br>
-
-        <b>1. Multiple Sequence Alignment (MSA)</b> is generally the alignment of three or more biological
-
-        sequences (protein or nucleic acid) of similar length. From the output, homology can be inferred
-
-        and the evolutionary relationships between the sequences studied.
-
-    <p>Tool :
-        <a href="http://www.ebi.ac.uk/Tools/msa/clustalo/">Cluster Omega</a>
     </p>
+
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        1. Multiple Sequence Alignment (MSA)
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    <b> Multiple Sequence Alignment (MSA)</b> is generally the alignment of three or more biological
+
+                    sequences (protein or nucleic acid) of similar length. From the output, homology can be inferred
+
+                    and the evolutionary relationships between the sequences studied.
+
+                    <p>Tool :
+                        <a href="http://www.ebi.ac.uk/Tools/msa/clustalo/">Cluster Omega</a>
+                    </p><hr>
+                    <h3 style="text-align: center;">
+                        <a id="output-1" class="anchor" href="#output" aria-hidden="true">
+                            <span aria-hidden="true" class="octicon octicon-link"></span></a>
+                        <strong>Output</strong>
+                    </h3>
+                    <div>
+                        <h4>Sequence Alignment using cluster omega</h4>
+                        <img src="images/Omega1.jpg">
+                    </div>
+
+                    <div>
+                        <div style="float: left; width: 30%;">
+                            <table class="table-striped">
+                                <tbody>
+                                <tr>
+                                    <td>Gaps</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>Mismatches</td>
+                                    <td>87</td>
+                                </tr>
+                                <tr>
+                                    <td>Similarity</td>
+                                    <td>544</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div style="float: right; width: 60%;">
+                            <img src="images/Omega2.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        2. Pair-wise sequence Alignment
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                    <b>Pair-wise sequence Alignment</b> is used to identify regions of similarity that may indicate
+
+                    functional, structural and/or evolutionary relationships between two biological sequences
+
+                    (protein or nucleic acid).
+                    <p>Tool :
+                        <a href="http://www.ebi.ac.uk/Tools/psa/emboss_needle/nucleotide.html">Needle</a>
+                    </p>
+                    <hr>
+                    <h3 style="text-align: center;">
+                        <a id="output-2" class="anchor" href="#output" aria-hidden="true">
+                            <span aria-hidden="true" class="octicon octicon-link"></span></a>
+                        <strong>Output</strong>
+                    </h3>
+                    <div>
+                        <h4>Pairwise Alignment using needle</h4>
+                        <img src="images/Needle2.jpg">
+                        <img src="images/Needle1.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <br>
 
-    <b>2. Pair-wise sequence Alignment</b> is used to identify regions of similarity that may indicate
-
-    functional, structural and/or evolutionary relationships between two biological sequences
-
-    (protein or nucleic acid).</p>
-    <p>Tool :
-        <a href="http://www.ebi.ac.uk/Tools/psa/emboss_needle/nucleotide.html">Needle</a>
-    </p>
-
     <hr>
-
-    <h1 style="text-align: center;">
-        <a id="output" class="anchor" href="#output" aria-hidden="true">
-            <span aria-hidden="true" class="octicon octicon-link"></span></a>
-        <strong>Output</strong>
-    </h1>
-
-    <div>
-        <h4>Sequence Alignment using cluster omega</h4>
-        <img src="images/Omega1.jpg">
-    </div>
-
-    <div>
-        <div style="float: left; width: 30%;">
-            Gaps &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 12<br>
-            Mismatches &nbsp; - 87<br>
-            Similarity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 544
-        </div>
-        <div style="float: right; width: 60%;">
-            <img src="images/Omega2.jpg">
-        </div>
-    </div>
 
     <div style="clear: both;"></div>
-
-    <div>
-        <h4>Pairwise Alignment using needle</h4>
-        <img src="images/Needle2.jpg">
-        <img src="images/Needle1.jpg">
-    </div>
-    <hr>
+    <br>
 
     <h1 style="text-align: center;">
         <a id="conclusion" class="anchor" href="#conclusion" aria-hidden="true">
@@ -225,7 +288,7 @@
                 Currently pursuing Masters of Science in Computer Science from University of Illinois at Chicago with
                 specialization in Artificial Intelligence-->
         </div>
-    </div>
+    </div class="contributors">
 
     <footer class="site-footer">
 

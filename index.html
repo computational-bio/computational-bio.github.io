@@ -300,10 +300,21 @@
                 </div>
             </div>
             <div role="tabpanel" class="tab-pane fade" id="paper-review">
-                <h2 style="text-align: center; padding-top: 10px">An Exact Algorithm to Compute the DCJ Distance for Genomes with Duplicate Genes</h2>
-                <h4 style="text-align: center">Mingfu Shao, Yu Lin, and Bernard Moret</h4>
+                <h2 style="text-align: center; padding-top: 20px">An Exact Algorithm to Compute the DCJ Distance for Genomes with Duplicate Genes</h2>
+                <h3 style="text-align: center">
+                    Mingfu Shao, Yu Lin, and Bernard Moret
+                        <h4 style="text-align: center; margin-top: 1em">
+                            Laboratory for Computational Biology and Bioinformatics, EPFL, Lausanne, Switzerland<br>
+                                Department of Computer Science and Engineering, University of California, San Diego,
+                                La Jolla, California<br>
+                            {mingfu.shao,yu.lin,bernard.moret}@epfl.ch
+                        </h4>
+                </h3>
                 <p class="text-style">
-                    The double-cut-and-join (DCJ) model has been used to calculate edit distance between two genomes for quite a long time. Optimizing edit distance problem forms an integral part to solve basic problems for genome evolution. Shao, Lin, and Moret proposes an Integer Linear Programming approach to tackle a specific case of genomes i.e. genomes with duplicate genes. This problem can be solved in linear time for genomes without duplicate genes but has been proved NP-Hard for genomes with duplicate genes by a reduction from NP-Hard problem of Breakpoint Graph Decomposition. The authors define this problem as to find a valid bijection between two genomes with duplicate gene content that minimizes the DCJ distance between them.
+                    <br>The double-cut-and-join (DCJ) model has been used to calculate edit distance between two genomes for quite a long time. Optimizing edit distance problem forms an integral part to solve basic problems for genome evolution. Shao, Lin, and Moret proposes an Integer Linear Programming approach to tackle a specific case of genomes i.e. genomes with duplicate genes. This problem can be solved in linear time for genomes without duplicate genes but has been proved NP-Hard for genomes with duplicate genes by a reduction from NP-Hard problem of Breakpoint Graph Decomposition.
+                    <br><br>The authors define this problem as to find a valid bijection between two genomes with duplicate gene content that minimizes the DCJ distance between them. When there is a consistent decomposition with <i>c</i> cycles and <i>o</i> odd-length paths, DCJ operations needed to transform genome G1 to G2 is given by <i>(|V|/4 − c − o/2)</i>. Hence to minimize total DCJ operations, maximize <i>(c + o/2)</i> over the space of all consistent decompositions. This reduces the problem to <i>maximum cycle decomposition problem</i> which is further formulated as an Integer Linear Program. The ILP formulation has O|E| variables, O|E| constraints and maximizes the number of cycles.
+                    <br><br>Authors have devised a preprocessing algorithm to reduce complexity while preserving optimality of DCJ distance computing algorithm. The combined approach is crucial for comparing genomes with duplicate genes as they are commonly observed in most species.
+                    <br><br>Authors claim a bold assumption that after a speciation event, only DCJ operations are involved. This is unrealistic and is only used to simplify the problem.
                 </p>
             </div>
         </div>

@@ -43,6 +43,8 @@
                 Review</a></li>
             <li role="presentation"><a href="#project-proposal" aria-controls="project-proposal" role="tab"
                                        data-toggle="tab">Project Proposal</a></li>
+            <li role="presentation"><a href="#project-update" aria-controls="project-update" role="tab"
+                                       data-toggle="tab">Project</a></li>
         </ul>
 
         <!-- Tab panes -->
@@ -362,82 +364,62 @@
                 </p>
             </div>
             <div role="tabpanel" class="tab-pane fade" id="project-proposal">
-                <br>
-                <h3>What is the Big Question?</h3>
-                <ul class="text-style">
-                    <li>
-                        Kinship Inference
-                    </li>
-                    <li>
-                        Given a set of offspring, our goal is to formulate the minimum parentage assignment
-                        problem/minimum number of mating problem.
-                    </li>
-                </ul>
-                <h3>What exists?</h3>
-                <ul class="text-style">
-                    <li>
-                        Statistical methods and combinatorial approaches such that - SIBSHIP, Pedigree, KINGROUP, and
-                        COLONY rely on statistical estimates of relatedness and reconstruct the maximum likelihood
-                        sibling groups.
-                    </li>
-                    <li>
-                        2-Allele Minimum Set Cover, Family Finder and Almudevar mix statistical and combinatorial
-                        approaches.
-                    </li>
-                </ul>
-                <h3>What is missing?</h3>
-                <ul class="text-style">
-                    <li>
-                        Most of the above existing methods make assumptions that do not hold for wild populations of
-                        animals and plants.
-                    </li>
-                    <li>
-                        Computational complexity is unknown for all the problems except for 2-Allele Minimum Set Cover
-                        problem.
-                    </li>
-                </ul>
-                <h3>How do you fulfill that?</h3>
-                <ul class="text-style">
-                    <li>
-                        Here we will list all the variance of minimum parentage assignment/minimum number of mating’s
-                        problem.
-                    </li>
-                    <li>
-                        We will also formulate all these variances of the above problem computationally and will
-                        classify
-                        them into buckets such as ‘Easy’ and ‘Hard’.
-                    </li>
-                </ul>
-                <h3>What impact will this have on world?</h3>
-                <ul class="text-style">
-                    <li>
-                        We are formulating the biological problems into computational problems so that we can find
-                        kinship
-                        inference for a majority of wild animals and plants.
-                    </li>
-                </ul>
-                <hr>
-                <h3 style="text-align: center;">
-                    <a id="bibliography-1" class="anchor" href="#bibliography-1" aria-hidden="true">
-                        <span aria-hidden="true" class="octicon octicon-link"></span></a>
-                    <strong>Bibliography</strong>
-                </h3>
-                <ul class="text-style">
-                    <li>
-                        Berger-Wolf, T. Y., S. I. Sheikh, B. Dasgupta, M. V. Ashley, I. C. Caballero, W.
-                        Chaovalitwongse, and S. L. Putrevu. Reconstructing Sibling Relationships in Wild Populations.
-                        <i>Bioinformatics 23.13</i> (2007): I49-56. Web
-                    </li>
-                    <li>
-                        Ashley, Mary V., Tanya Y. Berger-Wolf, Wanpracha Chaovalitwongse, Bhaskar Dasgupta, Ashfaq
-                        Khokhar, and Saad Sheikh. On Approximating an Implicit Cover Problem in Biology. <i>Algorithmic
-                        Aspects in Information and Management Lecture Notes in Computer Science</i> (2009): 43-54. Web.
-                    </li>
-                </ul>
+                <br><br>
+                <p>Kinship inference of a population is an indispensable component of understanding genetic relatedness
+                    or
+                    coefficient of relationship. It helps biologists to understand more profoundly how traits inherit
+                    from
+                    parents to their offspring. It also includes study of mating process so as to correctly construct
+                    relationship between a parent and its offspring. One of the major steps in kinship analysis is the
+                    formalization of biological problems into computational problems which can then be solved using
+                    statistical or combinatorial approaches [1].</p>
+                <p>Various biological problems pertaining to kinship inference have already been formalized including
+                    but
+                    not limited to MIN-PARENT Problem [2], MIN MATING Problem and Parentage assignment problem.</p>
+                <p>Formalization of these problems have been very helpful to biologists for analyzing consanguinity and
+                    evolution of genetic traits among different generations. We have not been able to completely analyze
+                    these processes by only finding the minimum number of parents. There are many variances of these
+                    problems which are yet to be formalized and classified into easy and hard categories.</p>
+                <p>We aim to formalize different variances of these problems using various constraints and restrictions.
+                    Our focus is mainly to formalize Full Sibling Reconstruction and Parentage Assignment Problem. We
+                    propose to define and impose a set of constraints in order to generate different variances of the
+                    above
+                    problems. For example, Full Sibling Reconstruction problem can be constrained on the mating process,
+                    whereas Parentage Assignment Problem’s variances can be constructed on the basis of unbalanced sex
+                    ratios or minimizing the number of females. We are also aiming to classify these problems into easy
+                    or
+                    hard categories accordingly.</p>
+                <p>Investigation of many fundamental biological phenomena including mating systems, selection and
+                    adaptation, kin selection, and dispersal patterns depends on the growing development and application
+                    of
+                    molecular markers. The power and potential of the genotypic information obtained in these studies
+                    often
+                    rests in our ability to reconstruct genealogical relationships among individuals. Formalization of
+                    these
+                    problems will prove to be a great advantage for above studies.
+                <h3 style="text-align: center">Bibliography</h3>
+                <p>[1] Mary V. Ashley, Tanya Y. Berger-Wolf, Isabel C. Caballero, Wanpracha Chaovalitwongse,
+                    Bhaskar DasGupta, and Saad I. Sheikh. Full Sibling Reconstruction in Wild Populations from
+                    Microsatellite Genetic Markers.</p>
+
+                <p>[2] Ashley, Mary V., Tanya Y. Berger-Wolf, Wanpracha Chaovalitwongse, Bhaskar Dasgupta, Ashfaq
+                    Khokhar, and Saad Sheikh. On Approximating an Implicit Cover Problem in Biology. <i>Algorithmic
+                        Aspects in Information and Management Lecture Notes in Computer Science (2009)</i>: 43-54. Web.
+                </p>
+
                 <hr>
                 <p class="text-style">
-                    <a href="project-proposal/CompBio-Proposal.pdf" download="Project-Proposal">Download Proposal</a>
+                    <a href="project-proposal/Comp-Bio-Proposal-revisited.pdf" download="Project-Proposal">Download
+                        Proposal</a>
                 </p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="project-update">
+                <h2 style="text-align: center; padding-top: 20px">Formalizing Biological Problems for Kinship
+                    Inference</h2>
+                <h3 style="text-align: center; margin-top: 1em">Abstract</h3>
+                <h3 style="text-align: center; margin-top: 1em">Introduction</h3>
+                <h3 style="text-align: center; margin-top: 1em">Motivation</h3>
+                <h3 style="text-align: center; margin-top: 1em">Formulations</h3>
             </div>
         </div>
 

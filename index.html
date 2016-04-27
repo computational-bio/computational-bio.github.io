@@ -416,26 +416,25 @@
             <div role="tabpanel" class="tab-pane fade" id="project-update">
                 <h2 style="text-align: center; padding-top: 20px">Formalizing Biological Problems for Kinship
                     Inference</h2>
-                <h3 style="text-align: center; margin-top: 1em">Introduction</h3>
+                <h3 style="text-align: center; margin-top: 1em">Introduction and Motivation</h3>
                 <p class="text-style">Kinship inference of a population is an indispensable component of understanding
-                    genetic relatedness
-                    or coefficient of relationship. A natural field biology question is to characterize genealogical
-                    relationships in wild populations, such as which organisms are siblings. It helps biologists to
-                    understand more profoundly how traits inherit from parents to their offspring. It also includes
-                    study of mating process so as to correctly construct relationship between a parent and its
-                    offspring. One of the major steps in kinship analysis is the formalization of biological problems
-                    into computational problems which can then be solved using statistical or combinatorial approaches.
+                    genetic relatedness or coefficient of relationship. A natural field biology question is to
+                    characterize genealogical relationships in wild populations, such as which organisms are siblings.
+                    Biologists want to know how individuals survive, acquire mates, reproduce, and disperse to new
+                    populations. It helps biologists to understand more profoundly how traits inherit from parents to
+                    their offspring. It also includes study of mating process so as to correctly construct relationship
+                    between a parent and its offspring. One of the major steps in kinship analysis is the formalization
+                    of biological problems into computational problems which can then be solved using statistical or
+                    combinatorial approaches.
                 </p>
                 <p class="text-style">This project presents generalized formalizations of biological problems. In this
                     project we are only
                     concerned with full sibling relationship from single generation sample of microsatellite markers.
                     The formalizations defined use the Mendelian inheritance rules to impose constraints on genetic
                     content possibilities of a sibling group. The formalizations of the inferred constraints under the
-                    parsimonious assumption of minimum number of parents leads to minimum MIN_PARENT problem. Variations
+                    parsimonious assumption of minimum number of parents leads to minimum MIN-PARENT problem. Variations
                     of these MIN-PARENT problems are defined in this project.</p>
-                <h3 style="text-align: center; margin-top: 1em">Motivation</h3>
                 <h3 style="text-align: center; margin-top: 1em">Formulations</h3>
-                Pre-defined Formulations:
                 <h4><b>Sibling Reconstruction Problem</b></h4>
                 <p class="text-style">Given a genetic (microsatellite) sample from a population of <i>n</i> diploid
                     individuals of the same generation, <i>U</i>, the goal is to reconstruct the full sibling groups
@@ -487,6 +486,10 @@
                         <div id="collapse-1" class="panel-collapse collapse in" role="tabpanel"
                              aria-labelledby="problem-1">
                             <div class="panel-body">
+                                <b style="color: black;">Definition:</b>
+                                <p>The goal of this problem is to find a minimum set of parents for a given sibling
+                                    partition of the universe and a candidate set of parents having monogamous mating
+                                    process.</p>
                                 <b style="color: black;">Input:</b>
                                 <ul>
                                     <li>
@@ -557,6 +560,10 @@
                         <div id="collapse-2" class="panel-collapse collapse" role="tabpanel"
                              aria-labelledby="problem-2">
                             <div class="panel-body">
+                                <b style="color: black;">Definition:</b>
+                                <p>The goal of this problem is to find a minimum set of parents for a given sibling
+                                    partition of the universe and a candidate set of parents having polygynous or
+                                    polyandrous mating process.</p>
                                 <b style="color: black;">Input:</b>
                                 <ul>
                                     <li>
@@ -571,14 +578,14 @@
                                 </ul>
                                 <b style="color: black;">Constraints:</b>
                                 <ul>
-                                    <li>Polygyny and Polyandry Mating Process</li>
+                                    <li>Polygynous and Polyandrous Mating Process</li>
                                 </ul>
                                 <b style="color: black;">Formulation:</b>
                                 <div style="text-align: center">
                                     <img src="images/min-parent-ploygyny-polyandry-1.png" width="380em">
                                 </div>
                                 <b style="color: black;">Relation with Sibling Reconstruction:</b>
-                                <p class="text-style" style="margin-bottom: 0;">Under ploygyny or polyandry mating
+                                <p class="text-style" style="margin-bottom: 0;">Under polygynous or polyandrous mating
                                     constraints, this problem is easy when compared to full-sibling reconstruction
                                     problem.</p>
                             </div>
@@ -597,6 +604,10 @@
                         <div id="collapse-3" class="panel-collapse collapse" role="tabpanel"
                              aria-labelledby="problem-3">
                             <div class="panel-body">
+                                <b style="color: black;">Definition:</b>
+                                <p>The goal of this problem is to find a minimum set of parents for a given sibling
+                                    partition of the universe and a candidate set of parents having promiscuous mating
+                                    process.</p>
                                 <b style="color: black;">Input:</b>
                                 <ul>
                                     <li>
@@ -622,7 +633,7 @@
                                     <img src="images/min-parent-promiscuous-2.png" width="200em">
                                 </div>
                                 <b style="color: black;">Relation with Sibling Reconstruction:</b>
-                                <p class="text-style" style="margin-bottom: 0;">Under ploygyny or polyandry mating
+                                <p class="text-style" style="margin-bottom: 0;">Under polygynous or polyandrous mating
                                     constraints, this problem is easy when compared to full sibling reconstruction
                                     problem.</p>
                             </div>
@@ -666,7 +677,7 @@
                                 </p>
                                 <b style="color: black;">Constraints:</b>
                                 <ul>
-                                    <li>Polyandry and Monogamous Mating process</li>
+                                    <li>Polyandrous and Monogamous Mating process</li>
                                 </ul>
                                 <b style="color: black;">Formulation:</b>
                                 <div style="text-align: center">
@@ -691,7 +702,7 @@
                                 </ul>
                                 <b style="color: black;">Constraints:</b>
                                 <ul>
-                                    <li>Polyandry and Monogamous Mating process</li>
+                                    <li>Polyandrous and Monogamous Mating process</li>
                                 </ul>
                                 <b style="color: black;">Formulation:</b>
                                 <div style="text-align: center">
@@ -699,7 +710,7 @@
                                 </div>
                                 <hr>
                                 <b style="color: black;">Relation with Sibling Reconstruction:</b>
-                                <p class="text-style" style="margin-bottom: 0;">Under polyandry or monogamous mating
+                                <p class="text-style" style="margin-bottom: 0;">Under polyandrous or monogamous mating
                                     constraints, the minimum number of fathers required to produce these offspring will
                                     be equal to the number of full sibling sub groups.</p>
                                 <div style="text-align: center">
@@ -730,6 +741,10 @@
                                 <b style="color: black;">Input:</b>
                                 <ul>
                                     <li>
+                                        Set of possible fathers <i>W</i> = {w<sub>1</sub>, w<sub>2</sub>, w<sub>3</sub>
+                                        ... }
+                                    </li>
+                                    <li>
                                         Set of possible mothers <i>V</i> = {v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>
                                         ... }
                                     </li>
@@ -739,10 +754,10 @@
                                 </ul>
                                 <b style="color: black;">Constraints:</b>
                                 <ul>
-                                    <li>Polygyny Mating process</li>
+                                    <li>Polygynous Mating process</li>
                                 </ul>
                                 <b style="color: black;">Formulation:</b>
-                                <p>Since, the mating process is polygyny, therefore the formulation of this problem
+                                <p>Since, the mating process is polygynous, therefore the formulation of this problem
                                     would be just to minimize the number of fathers required to produce the offsprings
                                     with no constraints.</p>
                                 <b style="color: black;">Objective for minimization:</b> <img

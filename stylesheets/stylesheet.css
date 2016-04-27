@@ -357,6 +357,7 @@ a:hover {
     width: 30%;
     padding: 0 8px;
 }
+
 .contributors-description {
 
 }
@@ -374,4 +375,11 @@ a:hover {
     text-align: justify;
     text-justify: inter-word;
     word-break: break-all;
+}
+
+.nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+    width: 25%;
+    text-align: center;
 }

@@ -490,13 +490,13 @@
                                 <b style="color: black;">Input:</b>
                                 <ul>
                                     <li>
-                                        partition <i>A</i>,
+                                        Partition <i>A</i>
                                     </li>
                                     <li>
-                                        set of possible parents <i>P</i>,
+                                        Set of possible parents <i>P</i>
                                     </li>
                                     <li>
-                                        universe <i>U</i>,
+                                        Universe <i>U</i>
                                     </li>
                                 </ul>
                                 <b style="color: black;">Constraints:</b>
@@ -560,13 +560,13 @@
                                 <b style="color: black;">Input:</b>
                                 <ul>
                                     <li>
-                                        partition <i>A</i>,
+                                        Partition <i>A</i>
                                     </li>
                                     <li>
-                                        set of possible parents <i>P</i>,
+                                        Set of possible parents <i>P</i>
                                     </li>
                                     <li>
-                                        universe <i>U</i>,
+                                        Universe <i>U</i>
                                     </li>
                                 </ul>
                                 <b style="color: black;">Constraints:</b>
@@ -600,13 +600,13 @@
                                 <b style="color: black;">Input:</b>
                                 <ul>
                                     <li>
-                                        partition <i>A</i>,
+                                        Partition <i>A</i>
                                     </li>
                                     <li>
-                                        set of possible parents <i>P</i>,
+                                        Set of possible parents <i>P</i>
                                     </li>
                                     <li>
-                                        universe <i>U</i>,
+                                        Universe <i>U</i>
                                     </li>
                                 </ul>
                                 <b style="color: black;">Constraints:</b>
@@ -650,14 +650,14 @@
                                 <b style="color: black;">Input:</b>
                                 <ul>
                                     <li>
-                                        set of possible fathers <i>W</i> = {w<sub>1</sub>, w<sub>2</sub>, w<sub>3</sub>
+                                        Set of possible fathers <i>W</i> = {w<sub>1</sub>, w<sub>2</sub>, w<sub>3</sub>
                                         ... }
                                     </li>
                                     <li>
-                                        set of mothers <i>V</i> = {v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub> ... }
+                                        Set of mothers <i>V</i> = {v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub> ... }
                                     </li>
                                     <li>
-                                        set of offspring <i>S</i> = {s<sub>1</sub>, s<sub>2</sub>, s<sub>3</sub> ... }
+                                        Set of offspring <i>S</i> = {s<sub>1</sub>, s<sub>2</sub>, s<sub>3</sub> ... }
                                     </li>
                                 </ul>
                                 <p>such that, <br>
@@ -682,11 +682,11 @@
                                 <b style="color: black;">Input:</b>
                                 <ul>
                                     <li>
-                                        set of possible mothers <i>V</i> = {v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>
+                                        Set of possible mothers <i>V</i> = {v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>
                                         ... }
                                     </li>
                                     <li>
-                                        set of offspring <i>S</i> = {s<sub>1</sub>, s<sub>2</sub>, s<sub>3</sub> ... }
+                                        Set of offspring <i>S</i> = {s<sub>1</sub>, s<sub>2</sub>, s<sub>3</sub> ... }
                                     </li>
                                 </ul>
                                 <b style="color: black;">Constraints:</b>
@@ -723,13 +723,31 @@
                         <div id="collapse-5" class="panel-collapse collapse" role="tabpanel"
                              aria-labelledby="problem-5">
                             <div class="panel-body">
-                                <b>MIN-FATHER POLYGYNY</b> is used to identify regions of similarity that may
-                                indicate
-
-                                functional, structural and/or evolutionary relationships between two biological
-                                sequences
-
-                                (protein or nucleic acid).
+                                <b style="color: black;">Definition:</b>
+                                <br>
+                                <p>Given a set of offspring and a set of possible mothers, the goal of this problem is
+                                    to minimize the number of parents required to produce those offspring.</p>
+                                <b style="color: black;">Input:</b>
+                                <ul>
+                                    <li>
+                                        Set of possible mothers <i>V</i> = {v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>
+                                        ... }
+                                    </li>
+                                    <li>
+                                        Set of offspring <i>S</i> = {s<sub>1</sub>, s<sub>2</sub>, s<sub>3</sub> ... }
+                                    </li>
+                                </ul>
+                                <b style="color: black;">Constraints:</b>
+                                <ul>
+                                    <li>Polygyny Mating process</li>
+                                </ul>
+                                <b style="color: black;">Formulation:</b>
+                                <p>Since, the mating process is polygyny, therefore the formulation of this problem
+                                    would be just to minimize the number of fathers required to produce the offsprings
+                                    with no constraints.</p>
+                                <b style="color: black;">Objective for minimization:</b> <img
+                                    src="images/min-father-4.png"
+                                    width="90em">
                             </div>
                         </div>
                     </div>

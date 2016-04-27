@@ -416,10 +416,324 @@
             <div role="tabpanel" class="tab-pane fade" id="project-update">
                 <h2 style="text-align: center; padding-top: 20px">Formalizing Biological Problems for Kinship
                     Inference</h2>
-                <h3 style="text-align: center; margin-top: 1em">Abstract</h3>
                 <h3 style="text-align: center; margin-top: 1em">Introduction</h3>
+                <p class="text-style">Kinship inference of a population is an indispensable component of understanding
+                    genetic relatedness
+                    or coefficient of relationship. A natural field biology question is to characterize genealogical
+                    relationships in wild populations, such as which organisms are siblings. It helps biologists to
+                    understand more profoundly how traits inherit from parents to their offspring. It also includes
+                    study of mating process so as to correctly construct relationship between a parent and its
+                    offspring. One of the major steps in kinship analysis is the formalization of biological problems
+                    into computational problems which can then be solved using statistical or combinatorial approaches.
+                </p>
+                <p class="text-style">This project presents generalized formalizations of biological problems. In this
+                    project we are only
+                    concerned with full sibling relationship from single generation sample of microsatellite markers.
+                    The formalizations defined use the Mendelian inheritance rules to impose constraints on genetic
+                    content possibilities of a sibling group. The formalizations of the inferred constraints under the
+                    parsimonious assumption of minimum number of parents leads to minimum MIN_PARENT problem. Variations
+                    of these MIN-PARENT problems are defined in this project.</p>
                 <h3 style="text-align: center; margin-top: 1em">Motivation</h3>
                 <h3 style="text-align: center; margin-top: 1em">Formulations</h3>
+                Pre-defined Formulations:
+                <h4><b>Sibling Reconstruction Problem</b></h4>
+                <p class="text-style">Given a genetic (microsatellite) sample from a population of <i>n</i> diploid
+                    individuals of the same generation, <i>U</i>, the goal is to reconstruct the full sibling groups
+                    (groups of individuals with the same parents). We assume no knowledge of parental information.</p>
+                <p>Formally, we are given a set <i>U</i> of <i>n</i> individual microsatellite samples from <i>l</i>
+                    genetic loci</p>
+                <div style="text-align: center">
+                    <img src="images/sibship-1.png" width="500em">
+                </div>
+                and a<sub>ij</sub> and b<sub>ij</sub> are the two alleles of the diploid individual <i>i</i> at locus
+                <i>j</i>. The goal is to find a partition of individuals P<sub>1</sub>, ... P<sub>m</sub> such that
+                <div style="text-align: center">
+                    <img src="images/sibship-2.png" width="500em">
+                </div>
+                Notice, here that we have not defined the function <b><i>Parents(x)</i></b>. This is a biological
+                objective.
+                <h4><b>MIN-PARENT Problem</b></h4>
+                <p class="text-style">Given the Mendelian constraints, our goal is to cover the Universe <i>U</i> by a
+                    set of full-sibling groups under the parsimonious assumption of a minimum number of parents.
+                    Formally, the MIN-PARENT problem is defined as follows:</p>
+                <div style="text-align: left">
+                    <img src="images/min-parent-1.png" width="600em" style="padding-left: 10px;">
+                    <img src="images/min-parent-2.png" width="400em" style="padding-left: 15px;">
+                </div>
+                <h4 style="color: black;"><b>Standard Terminologies</b></h4>
+                <div style="text-align: left">
+                    <img src="images/standard-terminology.png" width="550em" style="padding-left: 20px;">
+                </div>
+                <p>Assuming, our polynomial time oracle <i>O</i> answers following queries:
+                <ul>
+                    <li>
+                        Given a subset <i>U<sup>'</sup></i> of Universe <i>U</i>, does <i>U<sup>'</sup></i> form a valid
+                        sibling set following Mendelian constraints.
+                    </li>
+                </ul>
+                </p>
+                <p>Below are the formulations of variations of MIN-PARENT problem: </p>
+                <div class="panel-group" id="project-accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="problem-1">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#project-accordion"
+                                   href="#collapse-1"
+                                   aria-expanded="true" aria-controls="collapse-1">
+                                    1. FIND-MIN-PARENT MONOGAMY
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse-1" class="panel-collapse collapse in" role="tabpanel"
+                             aria-labelledby="problem-1">
+                            <div class="panel-body">
+                                <b style="color: black;">Input:</b>
+                                <ul>
+                                    <li>
+                                        partition <i>A</i>,
+                                    </li>
+                                    <li>
+                                        set of possible parents <i>P</i>,
+                                    </li>
+                                    <li>
+                                        universe <i>U</i>,
+                                    </li>
+                                </ul>
+                                <b style="color: black;">Constraints:</b>
+                                <ul>
+                                    <li>Monogamous Mating Process</li>
+                                </ul>
+                                <b style="color: black;">Formulation:</b>
+                                <div style="text-align: center">
+                                    <img src="images/min-parent-monogamy-1.png" width="350em">
+                                </div>
+                                <b style="color: black;">Relation with Sibling Reconstruction:</b>
+                                <p class="text-style" style="margin-bottom: 0;">Under monogamous constraints, number of
+                                    minimum set parents set
+                                    will always be equal to minimum sibling sub groups.</p>
+                                <div style="text-align: center">
+                                    <img src="images/min-parent-monogamy-2.png" width="120em">
+                                </div>
+                                <p>Hence, these problems are equivalent, but not vice-versa. We prove this in the
+                                    following lemma.</p>
+                                <br>
+                                <b style="color: black;">Lemma:</b> <b>If minimum number of matings is equal to the
+                                number of full-sibling sub groups, then it does not necessary imply monogamy.</b>
+                                <br><br>
+                                <p><b style="color: black;">Proof:</b> Suppose we have a set of parents <i>P</i>,
+                                    <br>
+                                <div style="text-align: center">P = {A, B, C, D, E}</div>
+                                <br>
+                                And a partition set <i>A</i>, for which each set <i>S</i> in <i>A</i> is a sibling set.
+                                <br><br>
+                                <div style="text-align: center">A = {{S<sub>1</sub>}, {S<sub>2</sub>}, {S<sub>3</sub>}}
+                                </div>
+                                <br>
+                                Using our oracle <i>O</i>, we find the parents of partition set <i>A</i>.
+                                <p>We get the following results:</p>
+                                <div style="text-align: center">
+                                    B(S<sub>1</sub>) = (B, C)<br>
+                                    B(S<sub>2</sub>) = (A, D)<br>
+                                    B(S<sub>3</sub>) = (A, E)<br><br>
+                                </div>
+                                <p>Here we have 3 matings, which is equal to the number of full-sibling sub groups we
+                                    originally have. And we can clearly observe that the mating process is not <i>Monogamous</i>
+                                    as parent <i>'A'</i> is shared with 2 sibling sets, i.e. <i>S<sub>2</sub></i> and
+                                    <i>S<sub>3</sub></i>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="problem-2">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse"
+                                   data-parent="#project-accordion"
+                                   href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+                                    2. FIND-MIN-PARENT POLYGYNY and POLYANDRY
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse-2" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="problem-2">
+                            <div class="panel-body">
+                                <b style="color: black;">Input:</b>
+                                <ul>
+                                    <li>
+                                        partition <i>A</i>,
+                                    </li>
+                                    <li>
+                                        set of possible parents <i>P</i>,
+                                    </li>
+                                    <li>
+                                        universe <i>U</i>,
+                                    </li>
+                                </ul>
+                                <b style="color: black;">Constraints:</b>
+                                <ul>
+                                    <li>Polygyny and Polyandry Mating Process</li>
+                                </ul>
+                                <b style="color: black;">Formulation:</b>
+                                <div style="text-align: center">
+                                    <img src="images/min-parent-ploygyny-polyandry-1.png" width="380em">
+                                </div>
+                                <b style="color: black;">Relation with Sibling Reconstruction:</b>
+                                <p class="text-style" style="margin-bottom: 0;">Under ploygyny or polyandry mating
+                                    constraints, this problem is easy when compared to full-sibling reconstruction
+                                    problem.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="problem-3">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse"
+                                   data-parent="#project-accordion"
+                                   href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+                                    3. FIND-MIN-PARENT PROMISCUOUS
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse-3" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="problem-3">
+                            <div class="panel-body">
+                                <b style="color: black;">Input:</b>
+                                <ul>
+                                    <li>
+                                        partition <i>A</i>,
+                                    </li>
+                                    <li>
+                                        set of possible parents <i>P</i>,
+                                    </li>
+                                    <li>
+                                        universe <i>U</i>,
+                                    </li>
+                                </ul>
+                                <b style="color: black;">Constraints:</b>
+                                <ul>
+                                    <li>Promiscuous Mating Process</li>
+                                </ul>
+                                <b style="color: black;">Valid Solutions:</b>
+                                <div style="text-align: center">
+                                    <img src="images/min-parent-promiscuous-1.png" width="90em">
+                                </div>
+                                <b style="color: black;">Formulation:</b>
+                                <div style="text-align: center">
+                                    <img src="images/min-parent-promiscuous-2.png" width="200em">
+                                </div>
+                                <b style="color: black;">Relation with Sibling Reconstruction:</b>
+                                <p class="text-style" style="margin-bottom: 0;">Under ploygyny or polyandry mating
+                                    constraints, this problem is easy when compared to full sibling reconstruction
+                                    problem.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="problem-4">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse"
+                                   data-parent="#project-accordion"
+                                   href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+                                    4. MIN-FATHER POLYANDRY and MONOGAMY
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse-4" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="problem-4">
+                            <div class="panel-body">
+                                <p>Depending upon the given input, this problem can be formulated in two different
+                                    ways:</p>
+                                <b style="color: black;">Definition - 1:</b>
+                                <br>
+                                <p>Given a set of mothers and their offspring, the goal of this problem is to minimize
+                                    the number of fathers required to produce those offspring.</p>
+                                <b style="color: black;">Input:</b>
+                                <ul>
+                                    <li>
+                                        set of possible fathers <i>W</i> = {w<sub>1</sub>, w<sub>2</sub>, w<sub>3</sub>
+                                        ... }
+                                    </li>
+                                    <li>
+                                        set of mothers <i>V</i> = {v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub> ... }
+                                    </li>
+                                    <li>
+                                        set of offspring <i>S</i> = {s<sub>1</sub>, s<sub>2</sub>, s<sub>3</sub> ... }
+                                    </li>
+                                </ul>
+                                <p>such that, <br>
+                                    v<sub>1</sub> is the mother of offspring set s<sub>1</sub>,<br>
+                                    v<sub>2</sub> is the mother of offspring set s<sub>2</sub>, and so on ...<br>
+                                </p>
+                                <b style="color: black;">Constraints:</b>
+                                <ul>
+                                    <li>Polyandry and Monogamous Mating process</li>
+                                </ul>
+                                <b style="color: black;">Formulation:</b>
+                                <div style="text-align: center">
+                                    <img src="images/min-father-1.png" width="350em">
+                                </div>
+
+                                <hr>
+
+                                <b style="color: black;">Definition - 2:</b>
+                                <br>
+                                <p>Given a set of offspring and a set of possible mothers, the goal of this problem is
+                                    to minimize the number of parents required to produce those offspring.</p>
+                                <b style="color: black;">Input:</b>
+                                <ul>
+                                    <li>
+                                        set of possible mothers <i>V</i> = {v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>
+                                        ... }
+                                    </li>
+                                    <li>
+                                        set of offspring <i>S</i> = {s<sub>1</sub>, s<sub>2</sub>, s<sub>3</sub> ... }
+                                    </li>
+                                </ul>
+                                <b style="color: black;">Constraints:</b>
+                                <ul>
+                                    <li>Polyandry and Monogamous Mating process</li>
+                                </ul>
+                                <b style="color: black;">Formulation:</b>
+                                <div style="text-align: center">
+                                    <img src="images/min-father-2.png" width="500em">
+                                </div>
+                                <hr>
+                                <b style="color: black;">Relation with Sibling Reconstruction:</b>
+                                <p class="text-style" style="margin-bottom: 0;">Under polyandry or monogamous mating
+                                    constraints, the minimum number of fathers required to produce these offspring will
+                                    be equal to the number of full sibling sub groups.</p>
+                                <div style="text-align: center">
+                                    <img src="images/min-father-3.png" width="150em">
+                                </div>
+                                <br>
+                                Hence, this problem is easy when compared to MIN-PARENT problem.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="problem-5">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse"
+                                   data-parent="#project-accordion"
+                                   href="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+                                    5. MIN-FATHER POLYGYNY
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse-5" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="problem-5">
+                            <div class="panel-body">
+                                <b>MIN-FATHER POLYGYNY</b> is used to identify regions of similarity that may
+                                indicate
+
+                                functional, structural and/or evolutionary relationships between two biological
+                                sequences
+
+                                (protein or nucleic acid).
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
